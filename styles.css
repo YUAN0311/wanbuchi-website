@@ -71,3 +71,56 @@ header p {
   background-color: #f0b179;
   transform: translateY(-2px);
 }
+
+.gallery {
+  padding: 20px;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #e27342;
+}
+
+.gallery img {
+  max-width: 90%;
+  height: auto;
+  margin: 10px 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map, .blog {
+  padding: 20px;
+  text-align: center;
+}
+
+.map iframe {
+  width: 95%;
+  max-width: 400px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.blog a {
+  color: #a0522d;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.flex-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.flex-gallery img {
+  width: 45%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

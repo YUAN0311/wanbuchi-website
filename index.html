@@ -6,33 +6,50 @@
   <title>碗不吃 - 一口臭豆腐、麵線</title>
   <style>
     body {
-      font-family: "微軟正黑體", sans-serif;
       margin: 0;
-      padding: 0;
-      background: url('https://images.unsplash.com/photo-1606312619070-4de0c06e07ca?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
-      background-size: cover;
+      font-family: "微軟正黑體", sans-serif;
+      font-weight: bold;
       color: #4a3f36;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
       text-align: justify;
     }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.7); /* 透明遮罩 */
+      z-index: -1;
+    }
+
     header {
       background-color: #e0c9a6;
       text-align: center;
       padding: 2rem 1rem;
     }
+
     header h1 {
-      margin: 0;
       font-size: 3rem;
       font-weight: bold;
       font-family: 'Segoe UI', sans-serif;
+      margin: 0;
     }
+
     .container {
       padding: 2rem 1.2rem;
       max-width: 800px;
       margin: auto;
     }
+
     .section {
       margin-bottom: 2rem;
     }
+
     .section h2 {
       font-size: 1.4rem;
       color: #a0522d;
@@ -40,10 +57,17 @@
       padding-left: 0.5rem;
       margin-bottom: 1rem;
     }
+
     .section p {
       line-height: 1.8;
       margin: 0.5rem 0;
     }
+
+    .section strong {
+      color: #d2691e;
+      font-weight: bold;
+    }
+
     .gallery img {
       max-width: 100%;
       border-radius: 10px;
@@ -51,15 +75,18 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
     }
+
     .gallery img:hover {
       transform: scale(1.05);
     }
+
     .double-img {
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
       justify-content: center;
     }
+
     .double-img img {
       width: calc(50% - 0.5rem);
       border-radius: 10px;
@@ -67,19 +94,20 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
     }
+
     .double-img img:hover {
       transform: scale(1.05);
     }
+
     .button-group {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      display: flex;
+      flex-wrap: wrap;
       gap: 1rem;
-      justify-items: center;
+      justify-content: space-between;
     }
+
     .button-group a {
-      display: block;
-      width: 100%;
-      max-width: 200px;
+      flex: 1 1 calc(50% - 1rem);
       text-align: center;
       padding: 0.8rem;
       background-color: #d2691e;
@@ -88,9 +116,11 @@
       border-radius: 6px;
       transition: background-color 0.3s ease;
     }
+
     .button-group a:hover {
       background-color: #b35416;
     }
+
     iframe {
       width: 100%;
       max-width: 100%;
@@ -98,6 +128,15 @@
       border-radius: 10px;
       height: 300px;
       margin-top: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .double-img img {
+        width: 100%;
+      }
+      .button-group a {
+        flex: 1 1 100%;
+      }
     }
   </style>
 </head>
@@ -131,9 +170,9 @@
     </div>
 
     <div class="section">
-      <h2>一群真心愛吃的人，給你最實在的推薦</h2>
-      <p><a href="https://dream3s.pixnet.net/blog/post/230294837" target="_blank">「部落客狂推，不來會後悔！」</a></p>
-      <p><a href="https://www.facebook.com/reel/1214358850228250" target="_blank">「連網紅都愛的台味秘密基地」</a></p>
+      <h2>部落客分享</h2>
+      <p><a href="https://dream3s.pixnet.net/blog/post/230294837" target="_blank">人氣美食專欄強烈推薦🔥</a></p>
+      <p><a href="https://www.facebook.com/reel/1214358850228250" target="_blank">網紅實測驚呼好吃📹</a></p>
     </div>
 
     <div class="section">
@@ -149,10 +188,9 @@
       <h2>線上訂購</h2>
       <div class="button-group">
         <a href="https://lin.ee/I7azwla" target="_blank">加入 LINE 好友</a>
- <a href="https://shopee.tw/guogou1989522?categoryId=100629&entryPoint=ShopByPDP&itemId=6420619457&upstream=search" target="_blank">蝦皮賣場</a>
         <a href="https://foodpanda.page.link/mdvm2JKS3r1aTfr29" target="_blank">Foodpanda 點餐</a>
         <a href="https://www.ubereats.com/store/碗不吃/WQqpRWRiTp-b-az_IcWNtg?diningMode=DELIVERY" target="_blank">Uber Eats 點餐</a>
-       
+        <a href="https://shopee.tw/guogou1989522?categoryId=100629&entryPoint=ShopByPDP&itemId=6420619457&upstream=search" target="_blank">蝦皮賣場</a>
       </div>
     </div>
 

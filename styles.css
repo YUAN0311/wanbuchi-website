@@ -126,3 +126,23 @@ iframe {
     min-width: 45%; /* 預防過窄 */
   }
 }
+
+/* 回頂部按鈕 */
+#toTop {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #a0522d;
+  color: white;
+  padding: 0.5rem 0.9rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  display: none;
+  cursor: pointer;
+  z-index: 999;
+}
+#toTop:hover {
+  background: #d2691e;
+}
+

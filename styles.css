@@ -122,11 +122,3 @@ iframe {
   margin-top: 1rem;
 }
 
-@media (max-width: 500px) {
-  .double-img img {
-    width: 100%;
-  }
-  .button-group a {
-    width: 100%;
-  }
-}

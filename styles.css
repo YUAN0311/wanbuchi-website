@@ -122,3 +122,9 @@ iframe {
   margin-top: 1rem;
 }
 
+@media (max-width: 480px) {
+  .button-group a {
+    flex: 1 1 calc(50% - 0.5rem); /* 手機寬度時仍維持兩個一排 */
+    min-width: 45%; /* 預防過窄 */
+  }
+}

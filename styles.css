@@ -94,15 +94,13 @@ strong {
 }
 
 .button-group {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 兩欄 */
   gap: 1rem;
 }
 
 .button-group a {
-  flex: 1 1 calc(50% - 0.5rem); /* 兩個一排 */
-  min-width: 130px; /* 保證在手機上不會過窄 */
+  display: block;
   text-align: center;
   padding: 0.8rem;
   background-color: #d2691e;

@@ -1,32 +1,134 @@
 body {
-  font-family: "微軟正黑體", sans-serif;
   margin: 0;
-  padding: 0;
-  background: url('https://images.unsplash.com/photo-1606312619070-4de0c06e07ca?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
-  background-size: cover;
+  font-family: "微軟正黑體", sans-serif;
+  font-weight: bold;
   color: #4a3f36;
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
   text-align: justify;
 }
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7); /* 半透明遮罩 */
+  z-index: -1;
+}
+
 header {
   background-color: #e0c9a6;
   text-align: center;
   padding: 2rem 1rem;
 }
+
 header h1 {
-  margin: 0;
   font-size: 3rem;
   font-weight: bold;
   font-family: 'Segoe UI', sans-serif;
+  margin: 0;
 }
+
 .container {
   padding: 2rem 1.2rem;
   max-width: 800px;
   margin: auto;
 }
+
 .section {
   margin-bottom: 2rem;
 }
+
 .section h2 {
   font-size: 1.4rem;
   color: #a0522d;
-  border-left: 4px solid #a052
+  border-left: 4px solid #a0522d;
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.section p {
+  line-height: 1.8;
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+.section strong {
+  color: #d2691e;
+  font-weight: bold;
+}
+
+.gallery img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.double-img {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.double-img img {
+  width: calc(50% - 0.5rem);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.double-img img:hover {
+  transform: scale(1.05);
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.button-group a {
+  flex: 1 1 calc(50% - 1rem);
+  text-align: center;
+  padding: 0.8rem;
+  background-color: #d2691e;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.button-group a:hover {
+  background-color: #b35416;
+}
+
+iframe {
+  width: 100%;
+  max-width: 100%;
+  border: 0;
+  border-radius: 10px;
+  height: 300px;
+  margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+  .double-img img {
+    width: 100%;
+  }
+  .button-group a {
+    flex: 1 1 100%;
+  }
+}

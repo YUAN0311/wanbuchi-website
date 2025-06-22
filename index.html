@@ -1,17 +1,19 @@
-<!DOCTYPE html><html lang="zh-Hant">
+<!DOCTYPE html>
+<html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>碗不吃 - 一口臭豆腐、麵線</title>
   <style>
     body {
-  font-family: "微軟正黑體", sans-serif;
-  margin: 0;
-  padding: 0;
-  background: url('https://images.unsplash.com/photo-1606312619070-4de0c06e07ca?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
-  background-size: cover;
-  color: #4a3f36;
-}
+      font-family: "微軟正黑體", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://images.unsplash.com/photo-1606312619070-4de0c06e07ca?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #4a3f36;
+      text-align: justify;
+    }
     header {
       background-color: #e0c9a6;
       text-align: center;
@@ -19,11 +21,9 @@
     }
     header h1 {
       margin: 0;
-      font-size: 2.2rem;
-    }
-    header p {
-      margin: 0.5rem 0 0;
-      font-size: 1.1rem;
+      font-size: 3rem;
+      font-weight: bold;
+      font-family: 'Segoe UI', sans-serif;
     }
     .container {
       padding: 2rem 1.2rem;
@@ -49,6 +49,10 @@
       border-radius: 10px;
       margin-bottom: 1rem;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
     }
     .double-img {
       display: flex;
@@ -57,19 +61,35 @@
       justify-content: center;
     }
     .double-img img {
-      max-width: 100%;
+      width: calc(50% - 0.5rem);
       border-radius: 10px;
       margin-bottom: 1rem;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .double-img img:hover {
+      transform: scale(1.05);
+    }
+    .button-group {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      justify-items: center;
     }
     .button-group a {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 0.8rem 1.2rem;
+      display: block;
+      width: 100%;
+      max-width: 200px;
+      text-align: center;
+      padding: 0.8rem;
       background-color: #d2691e;
       color: white;
       text-decoration: none;
       border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+    .button-group a:hover {
+      background-color: #b35416;
     }
     iframe {
       width: 100%;
@@ -83,12 +103,14 @@
 </head>
 <body>
   <header>
-  <h1 style="font-size: 3rem; font-weight: bold; font-family: 'Segoe UI', sans-serif;">碗不吃</h1>
-  </header>  <div class="container">
-  <div class="section">
-    <h2>品牌故事</h2>
-    <p>碗不吃創立於2019年，從一台三輪車的街頭叫賣開始，頂著日曬雨淋、起早摸黑，老闆娘用一份堅持與熱情把家的味道傳遞出去。一路走來，從路邊攤成長為擁有店面的品牌，靠的是顧客的信任與不斷嘗試創新口味的心。每一道料理都真材實料、用心熬煮，只希望你吃得安心、吃得開心。</p>
-  </div>
+    <h1>碗不吃</h1>
+  </header>
+  <div class="container">
+    <div class="section">
+      <h2>品牌故事</h2>
+      <p>碗不吃創立於2019年，從一台三輪車的街頭叫賣開始，頂著日曬雨淋、起早摸黑，老闆娘用一份堅持與熱情把家的味道傳遞出去。一路走來，從路邊攤成長為擁有店面的品牌，靠的是顧客的信任與不斷嘗試創新口味的心。每一道料理都真材實料、用心熬煮，只希望你吃得安心、吃得開心。</p>
+    </div>
+
     <div class="section">
       <h2>人氣推薦</h2>
       <p>大多數人的最愛，<strong>人氣NO.1招牌臭豆腐</strong>千萬不能錯過！酥脆口感，讓你一口接一口停不下來 😋</p>
@@ -96,42 +118,48 @@
       <p><strong>全新麻辣湯頭登場🔥</strong> 香麻不嗆、回味無窮～鴨血、臭豆腐、米血、黑輪任你搭配 🍢🍲</p>
       <p><strong>新品上市 👉 梅干筍絲控肉飯</strong> 鹹香入味，控到你的心坎裡～🍖🍚</p>
       <p>還有好多用心製作的料理等你來品嚐，小朋友才做選擇，我全都要了！😆</p>
-    </div><div class="section">
-  
-  <div class="gallery">
+    </div>
 
-  <img src="menu.jpg" alt="菜單圖片">
-  <div class="double-img">
-    <img src="sauce.jpg" alt="店內辣椒">
-    <img src="kimchi.jpg" alt="店內泡菜">
-  </div>
+    <div class="section">
+      <div class="gallery">
+        <img src="menu.jpg" alt="菜單圖片">
+        <div class="double-img">
+          <img src="sauce.jpg" alt="店內辣椒">
+          <img src="kimchi.jpg" alt="店內泡菜">
+        </div>
       </div>
-    </div><div class="section">
-  <h2>部落客分享</h2>
-  <p><a href="https://dream3s.pixnet.net/blog/post/230294837" target="_blank">美食部落客強力推薦！！</a></p>
-  <p><a href="https://www.facebook.com/reel/1214358850228250" target="_blank">知名網紅一探究竟</a></p>
-</div><div class="section">
-  <h2>營業資訊</h2>
-  <p>平日：早上10:00～凌晨03:00</p>
+    </div>
 
-<p>假日：早上10:00～晚上21:00</p>
-<p>（賣完會提早休息）</p>
+    <div class="section">
+      <h2>部落客分享</h2>
+      <p><a href="https://dream3s.pixnet.net/blog/post/230294837" target="_blank">美食部落客強力推薦！！</a></p>
+      <p><a href="https://www.facebook.com/reel/1214358850228250" target="_blank">知名網紅一探究竟</a></p>
+    </div>
+
+    <div class="section">
+      <h2>營業資訊</h2>
+      <p>平日：早上10:00～凌晨03:00</p>
+      <p>假日：早上10:00～晚上21:00</p>
+      <p>（賣完會提早休息）</p>
       <p>訂餐專線：<a href="tel:0903020404">0903-020-404</a></p>
       <p>地址：台中市梧棲區文華街222巷33號（童綜合急診室停車場旁）</p>
-    </div><div class="section">
+    </div>
 
+    <div class="section">
+      <h2>線上訂購</h2>
+      <div class="button-group">
+        <a href="https://lin.ee/I7azwla" target="_blank">加入 LINE 好友</a>
+ <a href="https://shopee.tw/guogou1989522?categoryId=100629&entryPoint=ShopByPDP&itemId=6420619457&upstream=search" target="_blank">蝦皮賣場</a>
+        <a href="https://foodpanda.page.link/mdvm2JKS3r1aTfr29" target="_blank">Foodpanda 點餐</a>
+        <a href="https://www.ubereats.com/store/碗不吃/WQqpRWRiTp-b-az_IcWNtg?diningMode=DELIVERY" target="_blank">Uber Eats 點餐</a>
+       
+      </div>
+    </div>
 
- <h2>線上訂購</h2>
-  <div class="button-group">
-    <a href="https://lin.ee/I7azwla" target="_blank">加入 LINE 好友</a>
-    <a href="https://foodpanda.page.link/mdvm2JKS3r1aTfr29" target="_blank">Foodpanda 點餐</a>
-    <a href="https://www.ubereats.com/store/碗不吃/WQqpRWRiTp-b-az_IcWNtg?diningMode=DELIVERY" target="_blank">Uber Eats 點餐</a>
-    <a href="https://shopee.tw/guogou1989522?categoryId=100629&entryPoint=ShopByPDP&itemId=6420619457&upstream=search" target="_blank">蝦皮賣場</a>
-</div>
-  <h2>交通位置</h2>
+    <div class="section">
+      <h2>交通位置</h2>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3637.8425724368494!2d120.53885097426213!3d24.247284278334607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346914d0ef055ff7%3A0x14ebc9de3876c23c!2z56KX5LiN5ZCD!5e0!3m2!1szh-TW!2stw!4v1750532144280!5m2!1szh-TW!2stw"></iframe>
-    </div><div class="section">
-
+    </div>
   </div>
 </body>
 </html>

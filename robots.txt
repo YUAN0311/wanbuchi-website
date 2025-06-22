@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://serene-pika-8fca3a.netlify.app/sitemap.xml

@@ -99,27 +99,24 @@
       transform: scale(1.05);
     }
 
-    .button-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: space-between;
-    }
+  .button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
 
-    .button-group a {
-      flex: 1 1 calc(50% - 1rem);
-      text-align: center;
-      padding: 0.8rem;
-      background-color: #d2691e;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: background-color 0.3s ease;
-    }
-
-    .button-group a:hover {
-      background-color: #b35416;
-    }
+.button-group a {
+  width: calc(50% - 0.5rem); /* 每排兩個 */
+  text-align: center;
+  padding: 0.8rem;
+  background-color: #d2691e;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
+}
 
     iframe {
       width: 100%;

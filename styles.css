@@ -1,12 +1,13 @@
 body {
-  margin: 0;
   font-family: "微軟正黑體", sans-serif;
-  font-weight: bold;
-  color: #4a3f36;
+  margin: 0;
+  padding: 0;
   background: url('background.jpg') no-repeat center center fixed;
   background-size: cover;
-  position: relative;
+  color: #4a3f36;
   text-align: justify;
+  font-weight: bold;
+  position: relative;
 }
 
 body::before {
@@ -27,10 +28,10 @@ header {
 }
 
 header h1 {
+  margin: 0;
   font-size: 3rem;
   font-weight: bold;
   font-family: 'Segoe UI', sans-serif;
-  margin: 0;
 }
 
 .container {
@@ -54,10 +55,9 @@ header h1 {
 .section p {
   line-height: 1.8;
   margin: 0.5rem 0;
-  font-weight: bold;
 }
 
-.section strong {
+strong {
   color: #d2691e;
   font-weight: bold;
 }
@@ -66,7 +66,7 @@ header h1 {
   max-width: 100%;
   border-radius: 10px;
   margin-bottom: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -85,7 +85,7 @@ header h1 {
   width: calc(50% - 0.5rem);
   border-radius: 10px;
   margin-bottom: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -96,12 +96,12 @@ header h1 {
 .button-group {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
-  justify-content: space-between;
 }
 
 .button-group a {
-  flex: 1 1 calc(50% - 1rem);
+  width: calc(50% - 0.5rem);
   text-align: center;
   padding: 0.8rem;
   background-color: #d2691e;
@@ -109,6 +109,7 @@ header h1 {
   text-decoration: none;
   border-radius: 6px;
   transition: background-color 0.3s ease;
+  box-sizing: border-box;
 }
 
 .button-group a:hover {
@@ -124,11 +125,11 @@ iframe {
   margin-top: 1rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .double-img img {
     width: 100%;
   }
   .button-group a {
-    flex: 1 1 100%;
+    width: 100%;
   }
 }
